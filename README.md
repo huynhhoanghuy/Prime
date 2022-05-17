@@ -14,6 +14,8 @@ Tùy theo tính chất mà nó thỏa mãn, ta sẽ có các loại số giả n
 
 => Số giả nguyên tố hoàn toàn không phải là số nguyên tố mà là hợp số.
 
+Note: Số nguyên tố nhiều hơn số giả nguyên tố. Khi một số thỏa mãn định lý Fermat, thì khả năng số đó là số nguyên tố cao hơn là số giả nguyên tố.
+
 # Bài toán kiểm tra tính nguyên tố
 
 Bài toán: Kiểm tra một số có phải là số nguyên tố hay không?
@@ -24,7 +26,7 @@ Mục đích: Trở nên quan trọng khi các hệ mật mã khóa công khai r
 
 Bài toán: Kiểm tra một số có phải là số _giả_ nguyên tố hay không?
 
-Mục đích: ...
+Mục đích: Số các hợp số thỏa mãn quan hệ "là hệ quả của prime" rất ít => Dùng nó để tạo nên các số nguyên tố xác suất
 
 
 
