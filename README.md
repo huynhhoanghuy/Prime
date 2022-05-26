@@ -32,3 +32,25 @@ Mục đích: Số các hợp số thỏa mãn quan hệ "là hệ quả của p
 
 Note: An integer x that is a Fermat pseudoprime to all values of a that are coprime to x is called a Carmichael number.
 
+# Một số ý tưởng cơ bản:
+
+Cách 1: Duyệt từ 2 đến n-1. (O(n))
+
+Cách 2: Duyệt từ 2 đến n-1 theo bước nhảy 2 (chỉ xét số lẻ): 2x+1. (O($n\over2$))
+
+Cách 3: Duyệt từ 2 đến $\sqrt{n}$. (O($\sqrt{n}$))
+
+Cách 4: Duyệt từ 2 đến $\sqrt{n}$ theo bước nhảy 2 (chỉ xét số lẻ): 2x+1. (O($\sqrt{n}\over2$))
+
+Cách 5: Nhận thấy tất cả số tự nhiên đều được tạo từ 6k, 6k +1, 6k + 2, 6k + 3, 6k + 4, 6k + 5.
+
+_Dễ thấy 6k, 6k+2, 6k + 4 chia hết cho 2; 6k, 6k +3 chia hết cho 3_
+
+=>_ Nếu số n không chia hết cho 2 và 3_, tức là n sẽ có dạng 6k + 1 hoặc 6k + 5.
+
+Mặt khác, 6k + 5 = 6(k+1) -1 = 6K -1.
+
+=> n sẽ có dạng 6k $\pm$ 1. Như vậy chúng ta sẽ giảm được phần lớn không gian tìm kiếm.
+
+Tóm lại, ta cần duyệt các số có dạng 6k - 1 và (6k -1) + 2 tối đa $\sqrt{n}$ phần tử => Start từ flag = 5, mỗi vòng lặp xét điều kiện flag và flag + 2, sau đó tăng flag += 6.
+(O($\sqrt{n}\over6$))
